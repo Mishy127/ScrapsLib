@@ -295,6 +295,6 @@ pub fn orderIgnoreCase(a: []const u8, b: []const u8) !std.math.Order {
         const a_c = a_it.nextCodepoint() orelse return if (b_it.nextCodepoint()) |_| .lt else .eq;
         const b_c = b_it.nextCodepoint() orelse return .gt;
 
-        return std.math.order(try unicode.toLower(a_c), try unicode.toLower(b_c)).differ() orelse continue;
+        return std.math.order(try toLower(a_c), try toLower(b_c)).differ() orelse continue;
     }
 }

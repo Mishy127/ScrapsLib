@@ -2,6 +2,8 @@ const std = @import("std");
 const math = std.math;
 const Allocator = std.mem.Allocator;
 
+///A lists that keeps all of it's items ordered at any moment
+///Adapts return of most methods if the order function returns an error union
 pub fn OrderedList(comptime T: type, comptime orderFn: anytype) type {
     const fn_info: std.builtin.Type.Fn = @typeInfo(@TypeOf(orderFn)).Fn;
     const Context: type = fn_info.params[0].type.?;

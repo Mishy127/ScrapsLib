@@ -1,4 +1,4 @@
-pub const version = @import("config").version;
+pub const version = @import("settings").version;
 pub const order = @import("order.zig");
 pub const mem = @import("mem.zig");
 pub const string = @import("string.zig");
@@ -8,6 +8,12 @@ pub const OrderedList = ordered_list.OrderedList;
 
 const recycle_list = @import("recycle_list.zig");
 pub const RecycleList = recycle_list.RecycleList;
+
+const bit_list = @import("bit_list.zig");
+pub const BitList = bit_list.BitList;
+
+const critical_point = @import("critical_point.zig");
+pub const CriticalPoint = critical_point.CriticalPoint;
 
 const math = @import("std").math;
 

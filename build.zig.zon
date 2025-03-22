@@ -1,12 +1,11 @@
 .{
-    .name = "Scraps",
-    .version = "1.0.0",
-
+    .name = .Scraps,
+    .fingerprint = 0x8b5a461733223fd2,
+    .version = "1.0.1",
     .dependencies = .{},
-
     .paths = .{
+        "src",
         "build.zig",
         "build.zig.zon",
-        "src",
     },
 }

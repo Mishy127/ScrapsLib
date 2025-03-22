@@ -2,6 +2,7 @@ const std = @import("std");
 const math = std.math;
 const Allocator = std.mem.Allocator;
 
+///A list that preserves indexes and keeps a list of empty spaces to prevent unnecesary allocations
 pub fn RecycleList(comptime T: type) type {
     return struct {
         const Self = @This();
